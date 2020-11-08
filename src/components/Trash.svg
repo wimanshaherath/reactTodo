@@ -1,0 +1,4 @@
+<svg id="Trash" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <rect id="rectangle" width="36" height="36" fill="none"/>
+  <path id="path" d="M24.5,9H6.5V27a3,3,0,0,0,3,3h12a3,3,0,0,0,3-3V9m-5.25-6h-7.5l-1.5,1.5H6.5A1.5,1.5,0,0,0,5,6V7.5H26V6a1.5,1.5,0,0,0-1.5-1.5H20.75L19.248,3" transform="translate(2.5 1.5)" fill="#fff" fill-rule="evenodd" opacity="0.96"/>
+</svg>

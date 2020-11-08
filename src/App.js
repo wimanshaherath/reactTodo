@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React,{useState} from 'react';
 import './App.css';
-
+import Form from './components/Form';
+import Editform from './components/Editform';
+import Listitem from './components/Listitem';
 function App() {
+  const [inputText,setInputText]=useState("");
+  const [todoTasks,setTodoTasks]=useState([]);
+
+  const intialState={text:"", completed:false, id:null}
+  const [editing,setEditing]=useState(false);
+  const [updateText,setUpdateText]=useState(intialState);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div className="App App-header">
+      <div className="todo-container">
+        {editing?
+        <Editform setEditing={setEditing} updateText={updateText} setUpdateText={setUpdateText} setTodoTasks={setTodoTasks} todoTasks={todoTasks}/>:
+        <Form inputText={inputText} setInputText={setInputText} setTodoTasks={setTodoTasks} todoTasks={todoTasks}/>
+      }
+        {/* <h3>{inputText}</h3> */}
+        <Listitem todoTasks={todoTasks} setTodoTasks={setTodoTasks} setEditing={setEditing} setUpdateText={setUpdateText}/>
+      </div>
+     
     </div>
   );
 }
